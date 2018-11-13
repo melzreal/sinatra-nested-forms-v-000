@@ -1,20 +1,21 @@
 class Ship
   attr_accessor :name, :type, :booty
-  @@ships = []
-  def initialize
-    @name = name
-    @type = type
-    @booty = booty
-    @@ships << self
+
+  SHIPS = []
+
+  def initialize(attributes)
+      attributes.each {|key, value| self.send(("#{key}="), value)}
+      SHIPS << self 
   end
 
-  def all
-    @@ships.all
+  def self.all
+    SHIPS
   end
 
-  def clear
-    @@ships.clear 
+  def self.clear
+    SHIPS.clear
   end
+
 
 
 end

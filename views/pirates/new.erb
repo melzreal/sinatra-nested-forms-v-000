@@ -3,7 +3,7 @@
   Weight: <input type="text" name="pirate[weight]">
   Height: <input type="text" name="pirate[height]">
 
-  Ship Name: <input type="text" name="pirate[ships][][name]">
+  Ship Name: <input type="text" name="pirate[ships][][ship_name_1]">
   Ship type: <input type="text" name="pirate[ships][][type]">
   Ship booty: <input type="text" name="pirate[ships][][booty]">
 
@@ -13,3 +13,9 @@
 
   <input type="submit">
 </form>
+fill_in("ship_name_1", :with => "Flying Dutchman")
+fill_in("ship_type_1", :with => "ghost ship")
+fill_in("ship_booty_1", :with => "gold coins")
+fill_in("ship_name_2", :with => "Black Pearl")
+fill_in("ship_type_2", :with => "merchant vessel")
+fill_in("ship_booty_2", :with => "treasure map")
